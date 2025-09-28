@@ -89,6 +89,7 @@ a {
 	border-radius: 20px;
 	background-color: rgb(20, 20, 20);
 	color: rgb(192, 192, 192);
+	flex-shrink: 1;
 }
 
 .projectImage {
