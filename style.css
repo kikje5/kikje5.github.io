@@ -1,4 +1,40 @@
 body {
+	background-color: rgb(24, 24, 24);
+	color: rgb(192, 192, 192);
+	margin: 0;
+	padding: 0;
+	font-family: "Courier New", Courier, monospace;
+}
+header {
 	background-color: rgb(16, 16, 16);
 	color: rgb(192, 192, 192);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+}
+footer {
+	background-color: rgb(16, 16, 16);
+	color: rgb(192, 192, 192);
+}
+
+.headerElement {
+	flex: 4;
+	text-align: center;
+	font-size: 200%;
+}
+.pfp {
+	flex: 1;
+	width: 100px;
+	border-radius: 50%;
+	text-align: left;
+	padding-left: 1vw;
+}
+
+.hamburgerButton {
+	flex: 1;
+	font-size: 300%;
+	text-align: right;
+	padding-right: 2vw;
 }
