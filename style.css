@@ -112,13 +112,15 @@ a {
 }
 
 .sideImage {
-	width: fit-content;
-	height: 40vh;
+	width: 100%;
+	height: fit-content;
+	justify-content: center;
 	margin-top: 2vh;
 	margin-left: 1vw;
 	margin-right: 1vw;
 	margin-bottom: 2vh;
-	background-color: blue;
+	flex: 0.5;
+	min-width: 500px;
 }
 
 .pageText {
