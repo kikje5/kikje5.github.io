@@ -103,6 +103,7 @@ a {
 	margin-top: 1vh;
 	margin-left: 0.5vw;
 	margin-right: 0.5vw;
+	margin-bottom: 1vh;
 }
 
 .footerElement {
@@ -136,15 +137,20 @@ a {
 	margin-right: 1vw;
 	margin-bottom: 2vh;
 	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .title {
+	display: flex;
 	font-size: 300%;
 	margin-top: 2vh;
 	margin-left: 1vw;
 	margin-right: 1vw;
 	margin-bottom: 2vh;
-	text-align: center;
+	justify-content: center;
+	flex: 1;
 }
 
 .pageWrap {
@@ -153,4 +159,12 @@ a {
 	flex-direction: row;
 	flex-wrap: wrap;
 	flex: 1;
+}
+
+.linksToProject {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	justify-items: center;
+	font-size: 200%;
 }
