@@ -30,7 +30,12 @@ footer {
 section {
 	height: 80vh;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(192, 192, 192);
 }
 
 .projectsFlex {
@@ -104,4 +109,41 @@ section {
 	margin-right: 1vw;
 	margin-bottom: 1vh;
 	margin-top: 1vh;
+}
+
+.sideImage {
+	width: fit-content;
+	height: 40vh;
+	margin-top: 2vh;
+	margin-left: 1vw;
+	margin-right: 1vw;
+	margin-bottom: 2vh;
+	background-color: blue;
+}
+
+.pageText {
+	margin-top: 2vh;
+	margin-left: 1vw;
+	margin-right: 1vw;
+	margin-bottom: 2vh;
+	background-color: red;
+	flex: 1;
+}
+
+.title {
+	font-size: 300%;
+	margin-top: 2vh;
+	margin-left: 1vw;
+	margin-right: 1vw;
+	margin-bottom: 2vh;
+	text-align: center;
+}
+
+.pageWrap {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-color: gold;
+	flex: 1;
 }
