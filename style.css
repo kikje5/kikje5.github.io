@@ -1,5 +1,5 @@
 body {
-	background-color: rgb(24, 24, 24);
+	background-color: rgb(32, 32, 32);
 	color: rgb(192, 192, 192);
 	margin: 0;
 	padding: 0;
@@ -28,9 +28,10 @@ footer {
 }
 
 section {
-	height: 80vh;
 	display: flex;
 	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 a {
@@ -49,7 +50,7 @@ a {
 	display: flex;
 	flex: 4;
 	text-align: center;
-	font-size: 200%;
+	font-size: 4vh;
 	padding: 33px;
 	justify-content: center;
 }
@@ -70,43 +71,34 @@ a {
 	color: rgb(192, 192, 192);
 }
 
-.wrapSection {
-	display: flex;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-	flex-grow: 1;
-}
-
 .projectButton {
-	width: 400px;
-	height: 320px;
-	margin-left: 0.5vw;
-	margin-right: 0.5vw;
-	margin-bottom: 1vh;
-	margin-top: 1vh;
-	padding: 1vh;
+	width: 40vw;
+	height: 35vw;
+	margin-bottom: 1vw;
+	margin-top: 1vw;
+	padding: 1vw;
 	text-align: center;
-	font-size: 200%;
-	border-color: blueviolet;
+	font-size: 3vw;
+	border-color: rgb(8, 8, 8);
 	border-style: solid;
-	border-radius: 20px;
-	background-color: rgb(20, 20, 20);
+	border-radius: 3vw;
+	border-width: 0.5vw;
+	background-color: rgb(24, 24, 24);
 	color: rgb(192, 192, 192);
 	flex-shrink: 1;
 }
 
 .projectImage {
-	width: 100%;
-	height: 66%;
+	width: 40vw;
 	border-radius: 20px;
 }
 
 .logo {
-	height: 50px;
-	margin-top: 1vh;
+	height: 5vw;
+	margin-top: 1vw;
 	margin-left: 0.5vw;
 	margin-right: 0.5vw;
-	margin-bottom: 1vh;
+	margin-bottom: 1vw;
 }
 
 .footerElement {
@@ -117,9 +109,8 @@ a {
 }
 
 .sideImages {
-	flex: 0.5;
+	flex: 1;
 	justify-content: center;
-	min-width: 400px;
 	margin-top: 1vh;
 	margin-left: 1vw;
 	margin-right: 1vw;
@@ -127,19 +118,17 @@ a {
 }
 
 .sideImage {
-	flex: 0.5;
 	width: 100%;
 	margin-top: 1vh;
 	margin-bottom: 1vh;
 }
 
 .pageText {
-	min-width: 400px;
 	margin-top: 2vh;
 	margin-left: 2vw;
 	margin-right: 1vw;
 	margin-bottom: 2vh;
-	flex: 1;
+	width: 50vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -147,27 +136,23 @@ a {
 
 .title {
 	display: flex;
-	font-size: 300%;
+	font-size: 4vw;
 	margin-top: 2vh;
 	margin-left: 1vw;
 	margin-right: 1vw;
 	margin-bottom: 2vh;
 	justify-content: center;
-	flex: 1;
 }
 
 .pageWrap {
 	display: flex;
-	justify-content: space-between;
 	flex-direction: row;
-	flex-wrap: wrap;
-	flex: 1;
 }
 
 .linksToProject {
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	justify-items: center;
-	font-size: 200%;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+	font-size: 3vw;
 }
