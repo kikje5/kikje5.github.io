@@ -48,18 +48,59 @@
 						bullet hell or bullet heaven. As a team we decided on taking inspiration from "enter the
 						gungeon" and so we decided to make a roguelike dungeon crawler.
 						<h2>My focus for this project</h2>
-						In the team I became responsible for creating the roguelike dungeon. I created a level
-						generation based on rooms. The difficulty came in that we agreed that evenly spaced square rooms
-						were boring. So I had to create a system that could handle rooms with variable size, shape and
-						door positions. I started this design off with creating a
-						<a href="Images/LevelGeneration-UML.png" style="color: blueviolet" target="_blank"
-							><u>UML</u></a
-						>
-						for the whole system. The sideQuest missions were scrapped but the rest was implemented
-						following the UML. I decided to make a complicated wall hitbox optimization algorithm instead of
-						checking surrounding tiles to set an algorithmic challenge for myself since algorithms was a
-						talking point in the class at that point. We wanted to make our own rooms so for that I also
-						needed to make a room editor and saving system.
+						<p>
+							In the team I became responsible for creating the roguelike dungeon. I created a level
+							generation based on rooms. The difficulty came in that we agreed that evenly spaced square
+							rooms were boring. So I had to create a system that could handle rooms with variable size,
+							shape and door positions. I started this design off with creating a
+							<a href="Images/LevelGeneration-UML.png" style="color: blueviolet" target="_blank"
+								><u>UML</u></a
+							>
+							for the whole system. The sideQuest missions were scrapped but the rest was implemented
+							following the UML.
+						</p>
+						<p>
+							for this project I choose to make a complicated wall
+							<a
+								href="https://github.com/kikje5/Go-Apply-Yourself/blob/main/game/LevelGeneration/WallColliderGenerator.cs"
+								target="_blank"
+								>hitbox optimization algorithm</a
+							>
+							instead of checking surrounding tiles to set an algorithmic challenge for myself since
+							algorithms was a talking point in the class at that point. It optimizes the space that the
+							colliders take up, so instead of saving for each tile if it is a wall with a collider, is
+							generates filling rectangles for which only 4 variables have to be saved. The bigger the
+							area which is filled with walls, the more efficient this algorithm becomes.
+						</p>
+						<p>
+							We wanted to design and make our own rooms so for that I also needed to make a room editor
+							and saving system. For this i created a separate
+							<a
+								href="https://github.com/kikje5/Go-Apply-Yourself/blob/main/game/LevelGeneration/RoomSaver.cs"
+								target="_blank"
+								>room saver</a
+							>
+							class which handles all the saving. It makes use of a DataContractSerializer which saves and
+							loads the rooms. It however was not possible to make the texture2D serializable so i had to
+							separately save the object and the texture. The object gets saved as an xml object and the
+							texture gets saved as a png, which on load get recombined to a single room object.
+						</p>
+
+						<p>
+							Now that i had rooms, they had to be combined, i did this in a separate
+							<a
+								href="https://github.com/kikje5/Go-Apply-Yourself/blob/main/game/LevelGeneration/LevelBuilder.cs"
+								target="_blank"
+								>level builder</a
+							>
+							class. Following the way we designed our level, it first adds the starting room, then a
+							couple of primary rooms which end in the end room. Then it adds secondary rooms to fill up
+							the level and make interesting side ways instead of a linear path. This way of generating a
+							level makes sure that there is always a path of a certain length to the end room, but also
+							makes the level interesting. If we added the side-quests these would also be relatively easy
+							to add to levels, by adding a new generating step after the secondary rooms where the
+							side-quest rooms are added.
+						</p>
 					</div>
 				</div>
 			</div>
